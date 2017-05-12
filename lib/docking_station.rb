@@ -4,14 +4,12 @@ class DockingStation
 
   DEFAULT_CAPACITY = 20
 
-def initialize( capacity = DEFAULT_CAPACITY )
-  @bikes = []
-  @capacity = capacity
-end
+  def initialize( capacity = DEFAULT_CAPACITY )
+    @bikes = []
+    @capacity = capacity
+  end
 
-
-  attr_reader :bikes, :capacity
-
+attr_reader :bikes, :capacity
 
   def release_a_bike
     raise "No more bikes!" if empty?

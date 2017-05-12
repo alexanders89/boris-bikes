@@ -20,12 +20,12 @@ describe DockingStation  do
     expect(subject.dock_a_bike(bike)).to eq [bike]
   end
 
-  it "shows if a bike has been docked" do
+  it "Shows if a bike has been docked" do
     expect((DockingStation.new).dock_a_bike(@bikes)).to eq [@bikes]
   end
 
   describe '#release_a_bike' do
-  it "will raise an error when there are no bikes available" do
+  it "Will raise an error when there are no bikes available" do
     expect {subject.release_a_bike}.to raise_error("No more bikes!")
   end
 end
@@ -37,8 +37,8 @@ end
     end
   end
 
-  it "allow change in the capacity" do
-    expect(DockingStation.new(10).capacity).to eq 10
+  it "Allow change in the capacity" do
+    expect(DockingStation.new(20).capacity).to eq 20
   end
 
   it "Sets the capacity to default value" do
