@@ -13,7 +13,10 @@ attr_reader :bikes, :capacity
 
   def release_a_bike
     raise "No more bikes!" if empty?
-    @bikes.pop
+    raise "No working bikes available" if !working_bikes_available
+    working_bike = @bikes.detect { |bike| bike.bike_is_working?  }
+    @bikes.delete working_bike
+    working_bike
   end
 
   def dock_a_bike(bike)
