@@ -22,9 +22,13 @@ attr_reader :bikes, :capacity
   end
 
   def dock_a_broken_bike(bike)
-    @bikes << bike.report_broken
+    bike.report_broken
+    @bikes << bike
   end
 
+  def working_bikes_available
+    @bikes.any? { |bike| bike.bike_is_working?}
+  end
 
 
   private

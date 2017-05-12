@@ -45,6 +45,11 @@ end
     expect(subject).to respond_to :dock_a_broken_bike
   end
 
+  it "Check if there are any working bikes available" do
+    expect(subject).to respond_to :working_bikes_available
+  end
 
-
+  it "Returns false if there are no working bikes in @bikes" do
+    expect(subject.working_bikes_available).to eq false
+  end
 end
