@@ -44,4 +44,9 @@ end
   it "Sets the capacity to default value" do
     expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
+
+  it "Allows the user to dock a broken bike" do
+    expect(subject).to respond_to :dock_a_broken_bike
+  end
+  
 end

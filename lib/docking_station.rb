@@ -21,6 +21,10 @@ attr_reader :bikes, :capacity
     @bikes << bike
   end
 
+  def dock_a_broken_bike(bike)
+    @bikes << bike.report_broken
+  end
+
   private
 
   def full?
