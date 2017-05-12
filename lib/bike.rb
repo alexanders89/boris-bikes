@@ -7,7 +7,7 @@ class Bike
   end
 
   def bike_is_working?
-    true
+    !@broken
   end
 
   def report_broken

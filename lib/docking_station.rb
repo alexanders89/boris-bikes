@@ -25,6 +25,8 @@ attr_reader :bikes, :capacity
     @bikes << bike.report_broken
   end
 
+
+
   private
 
   def full?
@@ -34,4 +36,5 @@ attr_reader :bikes, :capacity
   def empty?
      @bikes.empty?
   end
+
 end
